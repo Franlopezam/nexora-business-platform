@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nexora</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand">Nexora</div>
+      <nav>
+        <button data-page="dashboard">Dashboard</button>
+        <button data-page="products">Products</button>
+        <button data-page="customers">Customers</button>
+        <button data-page="sales">Sales</button>
+        <button data-page="inventory">Inventory</button>
+      </nav>
+      <button id="logout" class="logout">Log out</button>
+    </aside>
+
+    <main class="content">
+      <header>
+        <div>
+          <p class="eyebrow">Business workspace</p>
+          <h1 id="page-title">Dashboard</h1>
+        </div>
+        <div id="user-badge"></div>
+      </header>
+
+      <section id="dashboard-page" class="page"></section>
+      <section id="products-page" class="page hidden"></section>
+      <section id="customers-page" class="page hidden"></section>
+      <section id="sales-page" class="page hidden"></section>
+      <section id="inventory-page" class="page hidden"></section>
+    </main>
+  </div>
+
+  <div id="login" class="login">
+    <div class="login-card">
+      <h1>Nexora</h1>
+      <p>Sign in to your workspace.</p>
+      <form id="login-form">
+        <input id="email" type="email" value="admin@nexora.local" placeholder="Email" required>
+        <input id="password" type="password" value="Admin123!" placeholder="Password" required>
+        <button>Sign in</button>
+        <div id="login-error"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

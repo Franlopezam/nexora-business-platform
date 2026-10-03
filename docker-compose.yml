@@ -1,0 +1,13 @@
+services:
+  nexora:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      SECRET_KEY: change-this-in-production
+      DATABASE_URL: sqlite:///./nexora.db
+    volumes:
+      - nexora-data:/app
+
+volumes:
+  nexora-data:
